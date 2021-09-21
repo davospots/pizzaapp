@@ -66,3 +66,35 @@ h1, h2{
 .meats-options {
     margin-left:20px;
 }
+
+.vegi-options label {
+    margin-bottom:5px;
+}
+
+.current-pizza {
+    font-size:.95em;
+}
+.order-button {
+    text-align:center;
+    padding:30px 0;            
+}
+.btn {
+    border: solid 1px transparent;
+    border-radius: 6px;
+    color:#fff;
+    background-color:#bf4343;
+    outline: none;
+}
+.btn:hover:enabled,
+.btn:focus:enabled {
+    color: #bf4343;
+    border-color: currentColor;
+    background-color: #fff;
+}      
+#o-top li {
+    display:inline-block;
+    padding:2px 14px 2px 0;
+}
+#o-top li.top-title {
+    display:none;
+}
