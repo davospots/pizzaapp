@@ -1,66 +1,59 @@
-$(document).ready(function(){
-    var curtab = 1;
-    var tabWidth = $('#tabs .tab').width();
-    var totalcost = 0;
 
-    var orderReady = {  'size':'',
-                        'crust':'',
-                        'cheese':'',
-                        'sauce':'',
-                        'meats':[],
-                        'vegis':[]
-                    };
-    var pizzasize = {
-                    1:'Personal Pizza',
-                    2:'Medium Pizza',
-                    3:'Large Pizza',
-                    4:'Extra Large Pizza'
-                }
+  $(document).ready(function(){
+    function pizza(size, sauce, meat, veggie) {
+        this.size = size;
+        this.sauce = sauce; 
+        this.meat = meat;
+        this.veggie = veggie;
+      }
+      
+      pizza.prototype.price = function() {
+        var pieSize = this.size;
+        var pieMeat = this.meat.length;
+        var pieVeggie = this.veggie.length;
 
-    var crust = {   1:'Plain Crust',
-                    2:'Garlic Butter Crust',
-                    3:'Spicy Crust',
-                    4:'House Special Crust',
-                    5:'Cheese Stuffed Crust'
-                }
-    var cheese = {  
-    1:'Regular Cheese',         
-    2:'Extra Cheese',     
-    3:'No Cheese'
-    }
+
+        if (pieSize === "Six") {
+          return 6 + (pieMeat*100) + (pieVeggie*50);
+        } else if (pieSize === "Ten") {
+          return 10 + (pieMeat*100) + (pieVeggie*50);
+        } else if (pieSIze === "Twelve"){
+          return 12  + (pieMeat*100) + (pieVeggie*50);
+        }
+        else{
+            return 14 + (pieMeat*100) + (pieVeggie*50)
+        }
+      }  
+
+
+    $("form#order-form").submit(function(event){
+        event.preventDefault();
+        
+        var orderSize = $('#size').val();
+        var orderSauce = $('#sauce').val();
+        var orderMeat = [];
+        var orderVeggie = [];
+        console.log(orderSize, orderSauce, orderMeat, orderVeggie);
+      
+        $("input:checkbox[name=meat]:checked").each(function () {
+          orderMeat.push($(this).val());
+        });
+        $("input:checkbox[name=veggie]:checked").each(function () {
+          orderVeggie.push($(this).val());
+        });
     
-    var sauce = {  
-         1:'Marinara Sauce',       
-         2:'White Sauce',        
-         3:'Barbeque Sauce',          
-         4:'No Sauce'
-    }
-
-    var meats = {
-        1:'Pepperoni',            
-        2:'Sausage',         
-        3:'Canadian Bacon',        
-        4:'Ground Beef',          
-        5:'Anchovies',
-        6:'Chicken'
-
-    }
-    var veggi = {   
-        1:'Tomatoes',       
-        2:'Onions',      
-        3:'Olives',    
-        4:'Green Peppers',       
-        5:'Mushrooms',         
-        6:'Pineapple',         
-        7:'Spinach',       
-        8:'Jalapenos'
-    }    
-
-    var costs = {   
-        'size':{1:350, 2:500, 3:750, 4:1200},
-        'crust':{1:0, 2:0, 3:0, 4:0, 5:250},
-        'cheese':{1:0, 2:250, 3:0},
-        'extra-toppings':250
-    } 
-
-})
+        var newOrder = new Pizza(orderSize, orderSauce, orderMeat, orderVeggie);
+        var orderPrice = newOrder.price().toFixed(2);
+      
+       
+        $('.price').text(orderPrice);
+        $('.size').text(newOrder.size);
+        $('.sauce').text(newOrder.sauce);
+        $('.meat').text(newOrder.meat);
+        $('.veggie').text(newOrder.veggie);
+    
+        $('#receipt').show();
+      
+      });
+  });
+  

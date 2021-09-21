@@ -17,7 +17,7 @@
         <div class="menu-bar"> 
             <nav class="navbar navbar-expand-lg navbar-light container  py-3 ">
                 <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="#">PIZZA'S PIZZA</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -39,139 +39,85 @@
             </nav>
         </div>
     </section>
-    <div id="pizza-header">
-        <h1><img src="./images/pizzaslice.png" alt="" />Order your pizza</h1>
-    </div>
-    <div id="wrapper">
-                
-                <div class="container">
-                    <div class="row">
-                        
-                        <div class="col-md-7 col-sm-12">
-
-                            <h2>Select Pizza Size:</h2>
-                            <div class="pizza-sizes container">
-                                <div class="row">
-                                    <div class="col">
-                                        <label for="size-personal"><div class="s-pizza s-personal">6"</div>
-                                            <input type="radio" name="pizzasize" id="size-personal" value="1" /> Personal</label>
-                                    </div>
-                                    <div class="col">
-                                        <label for="size-medium"><div class="s-pizza s-medium">10"</div> 
-                                        <input type="radio" name="pizzasize" id="size-medium" value="2" /> Medium</label>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col">
-                                            <label for="size-large"><div class="s-pizza s-large">12"</div> 
-                                            <input type="radio" name="pizzasize" id="size-large" value="3" /> Large</label>
-                                        </div>
-                                        <div class="col">
-                                            <label for="size-xlarge"><div class="s-pizza s-xlarge">14"</div> 
-                                            <input type="radio" name="pizzasize" id="size-xlarge" value="4" /> Extra Large</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="cheese-sauce container">
-                        <div class="row">
-                            <div class="crust-options label-sel col-md-5 col-sm-12">
-                                <h3>Choose Crust:</h3>
-                                <p><label for="crust-1"><input type="radio" name="pizzacrust" id="crust-1" value="1" /> Plain Crust</label></p>
-                                <p><label for="crust-2"><input type="radio" name="pizzacrust" id="crust-2" value="2" /> Gluten Free Crust</label></p>
-                                <p><label for="crust-3"><input type="radio" name="pizzacrust" id="crust-3" value="3" /> Spicy Crust</label></p>
-                                <p><label for="crust-4"><input type="radio" name="pizzacrust" id="crust-4" value="4" /> Cheese Stuffed Crust</label></p>
-                                
-                            </div>
-                            <div class="cheese-options label-sel col">
-                                <h3>Choose Cheese:</h3>
-                                <p><label for="cheese-1"><input type="radio" name="pizzacheese" id="cheese-1" value="1" /> Regular Cheese</label></p>
-                                    <p><label for="cheese-2"><input type="radio" name="pizzacheese" id="cheese-2" value="2" /> Extra Cheese</label></p>
-                                    <p><label for="cheese-3"><input type="radio" name="pizzacheese" id="cheese-3" value="3" /> No Cheese</label></p>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="toppings container">
-                        <div class="row">
-                            <div class="meats-options label-sel col">
-                                <h3>Meats:</h3>
-                                <p><label for="m1"><input type="checkbox" name="pizzameat" id="m1" value="1" /> Pepperoni</label></p>
-                                <p><label for="m2"><input type="checkbox" name="pizzameat" id="m2" value="2" /> Sausage</label></p>
-                                <p><label for="m3"><input type="checkbox" name="pizzameat" id="m3" value="3" /> Canadian Bacon</label></p>
-                                <p><label for="m4"><input type="checkbox" name="pizzameat" id="m4" value="4" /> Ground Beef</label></p>
-                                <p><label for="m5"><input type="checkbox" name="pizzameat" id="m5" value="5" /> Anchovy</label></p>
-                                <p><label for="m6"><input type="checkbox" name="pizzameat" id="m6" value="6" /> Chicken</label></p>
-                            </div>
-                            <div class="vegi-options label-sel col">
-                                <h3>Veggies:</h3>
-                                <p><label for="v1"><input type="checkbox" name="pizzaveg" id="v1" value="1" /> Tomatoes</label></p>
-                                <p><label for="v2"><input type="checkbox" name="pizzaveg" id="v2" value="2" /> Onions</label></p>
-                                <p><label for="v3"><input type="checkbox" name="pizzaveg" id="v3" value="3" /> Olives</label></p>
-                                <p><label for="v4"><input type="checkbox" name="pizzaveg" id="v4" value="4" /> Green Peppers</label></p>
-                                <p><label for="v5"><input type="checkbox" name="pizzaveg" id="v5" value="5" /> Mushrooms</label></p>
-                                <p><label for="v6"><input type="checkbox" name="pizzaveg" id="v6" value="6" /> Pineapple</label></p>
-                                <p><label for="v7"><input type="checkbox" name="pizzaveg" id="v7" value="7" /> Spinach</label></p>
-                                <p><label for="v8"><input type="checkbox" name="pizzaveg" id="v8" value="8" /> Jalapenos</label></p>
-                            </div>
-                        </div>
-                    </div>
-                  
-                    <input name="" required value="number" type="number" id="number" placeholder="Number of pizzas" min="1"
-                    class="n" >  
-                </div>
-                <div id="order-details">
-                    <div class="container">
-                        <h3>Your Current Pizza:</h3>
-                        <div class="current-pizza container">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div id="o-size"></div>
-                                    <div id="o-crust"></div>
-                                </div>
-                                <div class="col-6">
-                                    <div id="o-cheese"></div>
-                                    <div id="o-sauce"></div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col">                            
-                                    <ul id="o-top"><li class="top-title"><strong>Toppings:</strong></li></ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="order-button container">
-                            <div class="row">
-                                <div class="col">
-                                    <button id="submit-order" class="btn" type="button" disabled>Submit Order</button>
-                                </div>
-                            </div>
-                        </div>
+            
+    <div class="container" id="pizza">
+        <h1 class="display-4">Select your size and toppings:</h1>
+        
+        <div class="row">
+            <div class="col-md-12">
+            </div>  
+        </div>     
+            <div class="row">
+                <div class="col-md-4">
+                    <form id="order-form">
+                        <div class="form-group">
+                            <p class="label">What size Pizza?</p>
+                            <select class="form-control" id="size">
+                                <option value="Nan">Choose your size</option>
+                                <option value="Six">6 Inch - Ksh.300</option>
+                                <option value="Ten">10 Inch - Ksh.500</option>
+                                <option value="Twelve">12 Inch - Ksh.700</option>
+                                <option value="Fourteen">14 Inch - Ksh.1000</option>
+                            </select>
+                        </div>                              
+                </div> 
+                <div class="col-md-4">
+                    <form id="order-form">
+                        <div class="form-group">
+                            <p class="label">Sauce?</p>
+                            <select class="form-control" id="sauce">
+                                <option value="choose">Choose your sauce</option>
+                                <option value="Red">Red Sauce</option>
+                                <option value="White">White Sauce</option>
+                            </select>
+                        </div>                              
+                </div> 
+                <div class="col-md-4">
+                    
+                </div> 
+            </div> 
+            <div class="row">
+                 
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <p class="label">Meats: (Ksh.100/each)</p>
+                        <input type="checkbox" name="meat" value=" Pepperoni"> Pepperoni<br>
+                        <input type="checkbox" name="meat" value=" Fennel Sausage">Sausage<br>
+                        <input type="checkbox" name="meat" value=" Chicken"> Chicken<br>
+                        <input type="checkbox" name="meat" value=" Bacon"> Bacon<br>
+                        <input type="checkbox" name="meat" value=" Ham"> Ham<br>
                     </div>
                 </div>    
-        </div>   
-    </div>  
-    <div id="order-result" class="container text-center">
-        <h3>Order Submitted!</h3>
-        <div class="container text-left">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <p class="label">Veggies: (Ksh.50.00/each)</p>
+                        <input type="checkbox" name="veggie" value=" Onions"> Onions<br>
+                        <input type="checkbox" name="veggie" value=" Mushrooms"> Mushrooms<br>
+                        <input type="checkbox" name="veggie" value=" Green Pepper"> Green Pepper<br>
+                        <input type="checkbox" name="veggie" value=" Black Olives"> Black Olives<br>
+                        <input type="checkbox" name="veggie" value=" Spinach"> Spinach<br>
+                        <input type="checkbox" name="veggie" value=" Pineapple"> Pineapple<br>
+                    </div>
+                    <button type="submit" class="btn btn-secondary btn-lg">Submit Order</button>
+                </div>    
+                
+                </form>
+            </div> 
             <div class="row">
-                <div class="col font-weight-bold">
-                    Order Summary:
+                <div class="col-md-4">
+                    <div id="receipt">
+                        <p class="label">Your order was placed for - </p>
+                        <p>Pizza Size: <span class="size"></span> Inch Pie</p>
+                        <p>Sauce: <span class="sauce"></span> Sauce</p>
+                        <p>Meat: <span class="meat"></span></p>
+                        <p>Veggies: <span class="veggie"></span></p>
+                        <p class="label">Total Amount Due: Ksh.<span class="price"></span></p>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col">
-                    <table class="table table-sm">
-                        <tbody id="order-sum"></tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>         
 
-           
+    </div> 
+          
 
     
 </body>
