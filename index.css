@@ -5,13 +5,16 @@
 }
 body{
     font-family: sans-serif;
+    
 }
 #nav-bar{
     position: sticky;
     top: 0;
     z-index: 10;
 }
-
+h1, h2{
+    text-align: center;
+}
 .pizza-sizes {
     text-align:center;
 }
@@ -29,7 +32,7 @@ body{
 }
 .sel .s-pizza,
 .label-sel label.sel {
-    background-color:#f9afaf;
+    background-color:#3fe20d;
 }
 .label-sel label {
     padding:2px 10px;
